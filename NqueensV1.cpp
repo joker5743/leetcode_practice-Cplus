@@ -1,11 +1,11 @@
-// 51. N皇后
+// 51. N皇后I
 
 #include <iostream>
 #include <unordered_set>
 #include <vector>
 using namespace std;
 
-class NQueens {
+class NQueensV1 {
  public:
   // 方法一：回溯+集合
   vector<vector<string>> solveNQueens_1(int n) {
@@ -31,14 +31,14 @@ class NQueens {
         if (columns.find(i) != columns.end()) continue;
 
         // 主对角线方向存在其他皇后，跳过
-        int diagonal1 = row - i;
+        int diagonal1 = row - i;  // 针对某一条主对角线，行索引 - 列索引=固定值
         if (diagonals1.find(diagonal1) != diagonals1.end()) continue;
 
         // 副对角线方向存在其他皇后，跳过
-        int diagonal2 = row - i;
+        int diagonal2 = row + i;  // 针对某一条副对角线，行索引 + 列索引=固定值
         if (diagonals2.find(diagonal2) != diagonals2.end()) continue;
 
-        queens[row] = i;  // 在第i排放置棋子
+        queens[row] = i;  // 在第row行，第i列放置棋子
         columns.insert(i);
         diagonals1.insert(diagonal1);
         diagonals2.insert(diagonal2);

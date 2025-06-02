@@ -1,10 +1,10 @@
 // 394. 字符串解码
 
+#include <algorithm>
 #include <stack>
+#include <string>
 #include <utility>
 #include <vector>
-#include <string>
-#include <algorithm>
 using namespace std;
 
 class DecodeString {

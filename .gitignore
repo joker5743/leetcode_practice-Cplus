@@ -1,3 +1,6 @@
-*.vscode*
+.idea/
+.vscode*
 *build*
-main*
+main
+*main.exe
+main.pdb

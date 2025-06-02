@@ -1,9 +1,9 @@
 // 739. 每日温度
 
+#include <climits>
+#include <numeric>
 #include <stack>
 #include <vector>
-#include<numeric>
-#include <climits>
 using namespace std;
 
 class DailyTemperature {
